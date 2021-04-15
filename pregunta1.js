@@ -4,11 +4,23 @@
  */
 
 const even = function(numbers){
-    
+    let devolucion = [];
+    numbers.map((numero) => {
+        if(numero === 0 || numero%2 == 0){
+            devolucion.push(numero);
+        }
+    });
+    return devolucion;
 }
 
 const odd = function(numbers){
-
+    let devolucion = [];
+    numbers.map((numero) => {
+        if(numero != 0 && numero %2 != 0){
+            devolucion.push(numero);
+        }
+    })
+    return devolucion;
 }
 
 // TESTS (no modificar)

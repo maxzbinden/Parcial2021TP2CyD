@@ -22,7 +22,12 @@
    * @param {*} inventors 
    */
   function addDiscoveries(inventor, discoveries, inventors){
-      
+      inventors.forEach(i => {
+        if(i.last === inventor){
+          i.discoveries = discoveries;
+        }
+      });
+      return inventors;
   }
 
   console.log(addDiscoveries('Einstein', 

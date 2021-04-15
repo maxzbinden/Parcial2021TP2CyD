@@ -3,6 +3,23 @@
 // si la longitud del array es < 3 se debe retornar undefined
 
 const greater3 = nums => {
+    let aux = nums.map((num => {
+        return num;
+    }));
+    console.log("aux " + aux);
+    let devolucion = [];
+    aux.sort((a,b) => b-a);
+    console.log("aux ordenado " + aux);
+    if(aux.length <3){
+        return undefined;
+    }else{
+        aux.forEach(num => {
+            if(!devolucion.includes(num)){
+                devolucion.push(num);
+            }
+        });
+        return devolucion[2];
+    }
     
 }
 
